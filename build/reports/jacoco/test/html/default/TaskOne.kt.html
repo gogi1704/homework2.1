@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TaskOne.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework2.1</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TaskOne.kt</span></div><h1>TaskOne.kt</h1><pre class="source lang-java linenums"><span class="pc" id="L1">var seconds = 100</span>
+
+fun main() {
+
+<span class="nc" id="L5">    agoToText()</span>
+
+<span class="nc" id="L7">}</span>
+
+
+fun agoToText(): String {
+
+<span class="fc" id="L12">    return when (seconds) {</span>
+<span class="pc bpc" id="L13" title="1 of 6 branches missed.">        in 0..60 -&gt; &quot;Р±С‹Р»(Р°) С‚РѕР»СЊРєРѕ С‡С‚Рѕ&quot;  //РјРёРЅСѓС‚Р°</span>
+<span class="pc bpc" id="L14" title="1 of 6 branches missed.">        in 61..(60 * 60) -&gt; helpWithEndingMinutes() // РѕС‚ 1 РґРѕ 60 РјРёРЅСѓС‚</span>
+<span class="pc bpc" id="L15" title="1 of 6 branches missed.">        in (60 * 60 + 1)..(60 * 60 * 24) -&gt; helpWithEndingHours()  //РѕС‚ С‡Р°СЃР° РґРѕ СЃСѓС‚РѕРє</span>
+<span class="pc bpc" id="L16" title="4 of 6 branches missed.">        in (60 * 60 * 24 + 1)..(60 * 60 * 24 * 2) -&gt; &quot; Р±С‹Р»(Р°) РІ СЃРµС‚Рё СЃРµРіРѕРґРЅСЏ&quot;</span>
+<span class="pc bpc" id="L17" title="1 of 6 branches missed.">        in (60 * 60 * 24 * 2 + 1)..(60 * 60 * 24 * 3) -&gt; &quot; Р±С‹Р»(Р°) РІ СЃРµС‚Рё РІС‡РµСЂР°&quot;</span>
+<span class="fc" id="L18">        else -&gt; &quot; Р±С‹Р»(Р°) РІ СЃРµС‚Рё РґР°РІРЅРѕ&quot;</span>
+    }
+}
+
+fun helpWithEndingMinutes(): String {
+<span class="fc" id="L23">    val minutes: Int = seconds / 60</span>
+<span class="pc bpc" id="L24" title="1 of 4 branches missed.">    if (minutes == 1 || minutes % 10 == 1) {</span>
+<span class="fc" id="L25">        return &quot;Р±С‹Р»(Р°) РІ СЃРµС‚Рё $minutes РјРёРЅСѓС‚Сѓ РЅР°Р·Р°Рґ&quot;</span>
+<span class="pc bpc" id="L26" title="6 of 12 branches missed.">    } else if (minutes == 2 || minutes % 10 == 2 || minutes == 3 || minutes % 10 == 3 || minutes == 4 || minutes % 10 == 4) {</span>
+<span class="nc" id="L27">        return &quot;Р±С‹Р»(Р°) РІ СЃРµС‚Рё $minutes РјРёРЅСѓС‚С‹ РЅР°Р·Р°Рґ&quot;</span>
+    } else
+<span class="fc" id="L29">        return &quot;Р±С‹Р»(Р°) РІ СЃРµС‚Рё $minutes РјРёРЅСѓС‚ РЅР°Р·Р°Рґ&quot;</span>
+}
+
+fun helpWithEndingHours(): String {
+<span class="fc" id="L33">    val hours: Int = seconds / 60 / 60</span>
+<span class="pc bpc" id="L34" title="2 of 4 branches missed.">    if (hours == 1 || hours % 10 == 1) {</span>
+<span class="nc" id="L35">        return &quot;Р±С‹Р»(Р°) РІ СЃРµС‚Рё $hours С‡Р°СЃ РЅР°Р·Р°Рґ&quot;</span>
+<span class="pc bpc" id="L36" title="5 of 12 branches missed.">    } else if (hours == 2 || hours % 10 == 2 || hours == 3 || hours % 10 == 3 || hours == 4 || hours % 10 == 4) {</span>
+<span class="fc" id="L37">        return &quot;Р±С‹Р»(Р°) РІ СЃРµС‚Рё $hours С‡Р°СЃР° РЅР°Р·Р°Рґ&quot;</span>
+    } else
+<span class="fc" id="L39">        return &quot;Р±С‹Р»(Р°) РІ СЃРµС‚Рё $hours С‡Р°СЃРѕРІ РЅР°Р·Р°Рґ&quot;</span>
+
+}
+
+fun setSecond(sec: Int) {
+<span class="fc" id="L44">    seconds = sec</span>
+<span class="fc" id="L45">}</span>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

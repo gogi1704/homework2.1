@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TaskOneKtTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2022-04-22T11:26:25" hostname="LAPTOP-00FRT6QQ" time="0.017">
+  <properties/>
+  <testcase name="helpWithEndingMinutes_test" classname="TaskOneKtTest" time="0.008"/>
+  <testcase name="agoToText_withLong" classname="TaskOneKtTest" time="0.0"/>
+  <testcase name="agoToText_withTomorrow" classname="TaskOneKtTest" time="0.001"/>
+  <testcase name="agoToText_withHours" classname="TaskOneKtTest" time="0.0"/>
+  <testcase name="helpWithEndingHours_test" classname="TaskOneKtTest" time="0.001"/>
+  <testcase name="agoToText_withMinutes" classname="TaskOneKtTest" time="0.001"/>
+  <testcase name="agoToText_today" classname="TaskOneKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
