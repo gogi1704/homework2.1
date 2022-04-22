@@ -16,7 +16,7 @@ import org.junit.Test
             val result2 = calcComission(cardType, totalAmountFroamMonth, sumPay2)
             //assert
             assertEquals(464_000, result)
-            assertEquals(0, result2)
+            assertEquals(1, result2)
         }
 
         @Test
