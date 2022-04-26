@@ -7,13 +7,8 @@ const val mir = " Mir"
 const val mcAndMaestroCommision = 0.06
 const val visaAndMirCommision = 0.075
 
-fun main() {
 
-    println(calcComission(cardType = masterCard , sumPay = 200_00))
-
-}
-
-fun calcComission(cardType: String = vkPay, totalAmountFroamMonth: Int = 0, sumPay: Int): Int {
+fun calcComission(cardType: String = vkPay,  sumPay: Int): Int {
     var commission = 0
     when (cardType) {
         maestro, masterCard -> commission =
@@ -33,3 +28,4 @@ fun calcComission(cardType: String = vkPay, totalAmountFroamMonth: Int = 0, sumP
     }
     return commission
 }
+
